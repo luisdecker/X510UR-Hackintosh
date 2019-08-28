@@ -9,6 +9,9 @@ The only tested networking sollution in my build was Android usb-tethering my wi
 #### Graphics
 Only intel integrated HD620 shared memory graphics are avaible. The 930MX is explicitly deactivated. 
 
+#### Pointing device
+You may need a usb mouse to install the hack, as touchpad wont work until later on. 
+
 ## EFI
 The EFI folder I use to boot my Hack. Have fixes that I found in a lot of places, thanks to the original authors of every kext, DSDT patch and config.plist present.
 
@@ -19,6 +22,8 @@ Fixes intel graphics, touchpad, battery indicator, audio, and android USB tether
 
 ### 1) Prepare bootable usb stick and Install 
 I followed the process described [here](https://github.com/nguyentrucxinh/ASUS-VivoBook-X510UQR-Hackintosh/blob/master/Guide.md). Check your BIOS configuration and follow the guide. Stop before "Post Installation"
+
+You may move the EFI folder to the EFI folder of the installation media so it can boot.
 
 ### 2) Copy EFI folder to you EFI/ESP folder 
 This will enable you to boot from the installed MacOS. Check your boot options to boot from clover. 
