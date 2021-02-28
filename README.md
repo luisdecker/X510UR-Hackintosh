@@ -9,19 +9,19 @@ Actually I'm using OpenCore 0.6.6 as bootloader. The actual installation of the 
 
 ## Status of the system
 
-### :heavycheckmark: Networking
+### :heavy_check_mark: Networking
 I'm using [itlwm](https://openintelwireless.github.io/itlwm/) to enable the Intel Wifi card (Intel(R) Dual Band Wireless AC 8275). 
 
 #### Relevant Kexts
 - AirportItlwm.kext
 
-### :heavycheckmark: Graphics
+### :heavy_check_mark: Graphics
 Only intel integrated HD620 shared memory graphics are avaible. The 930MX is explicitly deactivated. Following some [directions](https://www.reddit.com/r/hackintosh/comments/gjksrk/smbios_framebuffer_and_performance/), I configured it as as UHD617 due to performance issues.
 
 #### Relevant Kexts:
 - WhateverGreen.kext
 
-### :heavycheckmark: Pointing device and keyboard
+### :heavy_check_mark: Pointing device and keyboard
 You may need a usb mouse to install the hack, as touchpad may wont work until later on. 
 
 #### Relevant Kexts:
@@ -29,14 +29,14 @@ You may need a usb mouse to install the hack, as touchpad may wont work until la
 - VoodooI2CHID.kext
 - VoodooPS2Controller.kext
 
-### :heavycheckmark: Bluetooth
+### :heavy_check_mark: Bluetooth
 Working normally with the devices I use.
 
 #### Relevant Kexts
 - IntelBluetoothInjector.kext
 - IntelBluetoothFirmware.kext
 
-### :heavycheckmark: Battery Measurement
+### :heavy_check_mark: Battery Measurement
 Working normally, but reporting *Service Needed*, but wont affect anything.
 
 #### Relevant Kexts
@@ -45,7 +45,7 @@ Working normally, but reporting *Service Needed*, but wont affect anything.
 #### Relevant DSDT's
 - SSDT-BATT.aml
 
-### :heavycheckmark: Sound 
+### :heavy_check_mark: Sound 
 :heavy_check_mark: Internal speakers 
  
 :heavy_check_mark: Internal Microphone 
