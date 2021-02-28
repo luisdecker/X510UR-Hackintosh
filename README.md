@@ -3,31 +3,72 @@ Files and info my build of a Hackintosh on a ASUS X510UR-BQ292T
 
 This is a work in progress guide, that shows only what worked for me. I'm not any kind of hackintosh expert nor have access to a myriad of hardwares, so, I will only answer questions about this specific hardware and some related ones (VivoBook X510* mostly)
 
-#### Networking
-The only tested networking sollution in my build was Android usb-tethering my wifi connection. You can test a external wifi card or ethernet card. 
+## Bootloader
 
-#### Graphics
-Only intel integrated HD620 shared memory graphics are avaible. The 930MX is explicitly deactivated. 
+Actually I'm using OpenCore 0.6.6 as bootloader. The actual installation of the OS is a **Big Sur** update from a previous Mojave that I did with clover, so if you are doing a fresh install, follow the [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 
-#### Pointing device
-You may need a usb mouse to install the hack, as touchpad wont work until later on. 
+## Status of the system
 
-## EFI
-The EFI folder I use to boot my Hack. Have fixes that I found in a lot of places, thanks to the original authors of every kext, DSDT patch and config.plist present.
+### :heavycheckmark: Networking
+I'm using [itlwm](https://openintelwireless.github.io/itlwm/) to enable the Intel Wifi card (Intel(R) Dual Band Wireless AC 8275). 
 
-Fixes intel graphics, touchpad, battery indicator, audio, and android USB tethering (as X510UR dons't have a ethernet port and the default intel wifi card is not compatible)
+#### Relevant Kexts
+- AirportItlwm.kext
+
+### :heavycheckmark: Graphics
+Only intel integrated HD620 shared memory graphics are avaible. The 930MX is explicitly deactivated. Following some [directions](https://www.reddit.com/r/hackintosh/comments/gjksrk/smbios_framebuffer_and_performance/), I configured it as as UHD617 due to performance issues.
+
+#### Relevant Kexts:
+- WhateverGreen.kext
+
+### :heavycheckmark: Pointing device and keyboard
+You may need a usb mouse to install the hack, as touchpad may wont work until later on. 
+
+#### Relevant Kexts:
+- VoodooI2C.kext
+- VoodooI2CHID.kext
+- VoodooPS2Controller.kext
+
+### :heavycheckmark: Bluetooth
+Working normally with the devices I use.
+
+#### Relevant Kexts
+- IntelBluetoothInjector.kext
+- IntelBluetoothFirmware.kext
+
+### :heavycheckmark: Battery Measurement
+Working normally, but reporting *Service Needed*, but wont affect anything.
+
+#### Relevant Kexts
+- SMCBatteryManager.kext
+
+#### Relevant DSDT's
+- SSDT-BATT.aml
+
+### :heavycheckmark: Sound 
+:heavy_check_mark: Internal speakers 
+ 
+:heavy_check_mark: Internal Microphone 
+
+:heavy_check_mark: Bluetooth Speakers 
+
+:heavy_check_mark: USB Microphone 
+
+#### Relavant Kexts
+- AppleALC.kext
+
+### CPU power scheduling
+I tuned CPUFriend (Using CPUFriendFriend) to a more performance-oriented frequecy scheduler. 
+
+#### Relevant Kexts
+- CPUFriend.kext
+
+### :x: Sleep
+Currently not working. Didn't tried to fix it at all. 
+
+# EFI
+The EFI folder attached is the one I use to boot my Hack. The kexts attached are the ones recommended by OpenCore Install Guide, and the ones listed above. Fixes intel graphics, touchpad, battery indicator, audio, bluetooth and Wifi. 
 
 # Guide
-(Scratch)
 
-### 1) Prepare bootable usb stick and Install 
-I followed the process described [here](https://github.com/nguyentrucxinh/ASUS-VivoBook-X510UQR-Hackintosh/blob/master/Guide.md). Check your BIOS configuration and follow the guide. Stop before "Post Installation"
-
-You may move the EFI folder to the EFI folder of the installation media so it can boot.
-
-### 2) Copy EFI folder to you EFI/ESP folder 
-This will enable you to boot from the installed MacOS. Check your boot options to boot from clover. 
-
-### 3) ????
-
-### 4) Profit! 
+Follow the [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). Some DSDT's, kexts and configurations here presented may be used before the install to fix some of the issues I mentioned above.
