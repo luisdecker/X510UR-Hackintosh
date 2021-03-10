@@ -64,7 +64,7 @@ I tuned CPUFriend (Using CPUFriendFriend) to a more performance-oriented frequec
 - CPUFriend.kext
 
 ### ✔️ Sleep
-Aparently working. Had to apply a DSDT patch so to avoid instant wake from LAL, following guide provided in [this guide](https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html). 
+Aparently working. Had to apply a DSDT patch so to avoid instant wake from LAN, following guide provided in [this guide](https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html). 
 
 #### Relevant SDST's
 - SSDT-GPRW.aml
