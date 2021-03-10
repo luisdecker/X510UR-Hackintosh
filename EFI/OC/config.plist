@@ -129,6 +129,32 @@
 				<key>Replace</key>
 				<data>WE9TSQ==</data>
 			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-GPRW.aml</string>
+				<key>Count</key>
+				<integer>0</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>R1BSVwI=</data>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>OemTableId</key>
+				<data></data>
+				<key>Replace</key>
+				<data>WFBSVwI=</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+				<key>TableLength</key>
+				<integer>0</integer>
+				<key>TableSignature</key>
+				<data></data>
+			</dict>
 		</array>
 		<key>Quirks</key>
 		<dict>
@@ -274,7 +300,7 @@
 				<key>framebuffer-con2-type</key>
 				<data>AAgAAA==</data>
 				<key>model</key>
-				<string>Intel HD Graphics KBL CRB</string>
+				<string>Intel UHD 620</string>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1143,7 +1169,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>alcid=13 -wegnoegpu</string>
+				<string>alcid=13 -wegnoegpu igfxonln=1</string>
 				<key>csr-active-config</key>
 				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -1216,9 +1242,9 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C02707501QXHWVP1F</string>
+			<string>C02724609CDHRPC8C</string>
 			<key>ProcessorType</key>
-			<integer>0</integer>
+			<integer>1793</integer>
 			<key>ROM</key>
 			<data>vKimq3Ci</data>
 			<key>SpoofVendor</key>
@@ -1226,11 +1252,11 @@
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>SystemProductName</key>
-			<string>MacBookPro14,1</string>
+			<string>MacBookPro14,2</string>
 			<key>SystemSerialNumber</key>
-			<string>C02T8RYZHV29</string>
+			<string>C02TVVZ5HV2N</string>
 			<key>SystemUUID</key>
-			<string>12201A5D-4E59-4EF1-BDFE-41F1F1C48944</string>
+			<string>8A671F52-8064-465A-B2F0-0801ED95B37F</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
