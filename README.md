@@ -63,8 +63,11 @@ I tuned CPUFriend (Using CPUFriendFriend) to a more performance-oriented frequec
 #### Relevant Kexts
 - CPUFriend.kext
 
-### :x: Sleep
-Currently not working. Didn't tried to fix it at all. 
+### ✔️ Sleep
+Aparently working. Had to apply a DSDT patch so to avoid instant wake from LAL, following guide provided in [this guide](https://dortania.github.io/OpenCore-Post-Install/usb/misc/instant-wake.html). 
+
+#### Relevant SDST's
+- SSDT-GPRW.aml
 
 # EFI
 The EFI folder attached is the one I use to boot my Hack. The kexts attached are the ones recommended by OpenCore Install Guide, and the ones listed above. Fixes intel graphics, touchpad, battery indicator, audio, bluetooth and Wifi. 
