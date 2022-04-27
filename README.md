@@ -1,3 +1,10 @@
+# **DISCLAIMER**
+
+I don't own this laptop anymore. This repo is for documentation proposes only.
+
+If you are new to hackintosh, please follow [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/). There is no easy way into hackintosh. 
+
+
 # X510UR-Hackintosh
 Files and info my build of a Hackintosh on a ASUS X510UR-BQ292T
 
